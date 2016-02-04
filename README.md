@@ -5,6 +5,7 @@ Xcode-CComment
 Xcode plugin for C Style Comment(uncomment) /**/
 
 Fork Features:
+---------
 将单行注释的格式改为/** */，方便在调用时显示注释
 
 Features:
