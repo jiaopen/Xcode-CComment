@@ -103,7 +103,7 @@ static CComment *sharedPlugin;
         [Xcode replaceCharactersInRange:range withString:commented];
 
         if (singleLine && cs == CommentNone) {
-            [Xcode moveCursor2Location:range.location + 2 + [self isOptionEnabled]];
+            [Xcode moveCursor2Location:range.location + 3 + [self isOptionEnabled]];
         }
     }
 }
@@ -187,9 +187,9 @@ static CComment *sharedPlugin;
         return nil;
     } else {
         if ([self isOptionEnabled]) {
-            return [NSString stringWithFormat:@"/* %@ */", value];
+            return [NSString stringWithFormat:@"/** %@ */", value];
         } else {
-            return [NSString stringWithFormat:@"/*%@*/", value];
+            return [NSString stringWithFormat:@"/**%@*/", value];
         }
     }
 }
